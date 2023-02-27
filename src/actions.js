@@ -10,23 +10,23 @@ export const createAction = async({request}) => {
 
     // construct request body
     const newTreat = {
-        Dessert_Name: formData.get("Dessert Name"),
-        Allergies: formData.get("Allergies?"),
-        specify_allergy: formData.get("If yes, please specify"),
-        Dessert_Details: formData.get("Dessert Details (please be as specific as possible)"),
+        Dessert_Name: formData.get("Dessert_Name"),
+        Allergies: formData.get("Allergies"),
+        specify_allergy: formData.get("specify_allergy"),
+        Dessert_Details: formData.get("Dessert_Details"),
         Email: formData.get("Email"),
-        Budget: formData.get("Budget")
+        Budget: formData.get("BUDGET_OPTIONS")
     }
-
+    console.log(newTreat)
     await fetch(URL + "/treat/", {
-        method: "post",
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newTreat)
     })
 
-    return redirect("/")
+    return redirect("/treats")
 }
 
 // UPDATE ACTION

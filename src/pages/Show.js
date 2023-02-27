@@ -3,19 +3,13 @@ import { useLoaderData } from "react-router-dom";
 const Show = (props) => {
     const post = useLoaderData()
 
-    const div = {
-        textAlign: "center",
-        border: "3px solid green",
-        width: "80%",
-        margin: "30px auto",
-    };
-
     return (
         <>
-        <h1>{post.Dessert_Name}</h1>
-        <h2>test</h2>
-        <h3>Allergies: {post.Allergies ? 'Yes' : 'No'}</h3>
-        <h4>{post.Dessert_Details}</h4>
+        <h1 className="createH1">You ordered...</h1>
+        <h2>{post.Dessert_Name}</h2>
+        <h4>Allergies specified: {post.Allergies ? post.If_yes_please_specify : 'None'}</h4>
+        <h4>Details: {post.Dessert_Details}</h4>
+        <h4>Budget: {post.Budget}</h4>
         </>
     )
 };

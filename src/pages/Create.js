@@ -1,6 +1,7 @@
 import { Form } from "react-router-dom";
 
 const Create = (props) => {
+
     return <>
         <h1 className="createH1">Today's craving is...</h1>
 
@@ -33,7 +34,6 @@ const Create = (props) => {
             <label>Email:</label>
             <input type="text" name="Email" placeholder="Email"/>
             </div>
-
             <button className="submitButton">SUBMIT</button>
         </Form>
         </>
