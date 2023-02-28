@@ -37,18 +37,24 @@ export const updateAction = async({request, params}) => {
 
     // get treat data
     const id = params.id
-
+    let al = formData.get("Allergies")
+    if (al === null) {
+        al = false
+    } else {
+        al = true
+    }
     // construct request body
     const updatedTreat = {
-        Dessert_Name: formData.get("Dessert Name"),
-        Allergies: formData.get("Allergies?"),
-        specify_allergy: formData.get("If yes, please specify"),
-        Dessert_Details: formData.get("Dessert Details (please be as specific as possible)"),
+        Dessert_Name: formData.get("Dessert_Name"),
+        Allergies: al,
+        specify_allergy: formData.get("specify_allergy"),
+        Dessert_Details: formData.get("Dessert_Details"),
         Email: formData.get("Email"),
-        Budget: formData.get("Budget")
+        Budget: formData.get("BUDGET_OPTIONS")
     }
 
     //send request to backend
+    console.log(updatedTreat)
     await fetch(URL + `/treat/${id}/`, {
         method: "put",
         headers: {
@@ -57,7 +63,7 @@ export const updateAction = async({request, params}) => {
         body: JSON.stringify(updatedTreat)
     })
 
-    return redirect(`/post/${id}`)
+    return redirect(`/treat/${id}`)
 }
 
 export const deleteAction = async({params}) => {
@@ -70,5 +76,5 @@ export const deleteAction = async({params}) => {
         method: "delete",
     })
 
-    return redirect("/")
+    return redirect("/treats")
 }

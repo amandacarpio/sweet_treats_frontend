@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 $mainColor: #DC6ACF;
 $brownColor: #7a6563;
 
@@ -22,6 +23,7 @@ $brownColor: #7a6563;
     color: $mainColor;
     font-family: 'Rochester', cursive;
     font-size: 150px;
+    font-weight: bold;
 }
 
 .homeH3 {
@@ -48,7 +50,7 @@ $brownColor: #7a6563;
     border-radius: 20px;
     padding: 15px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+    font-size: 25px;
     transition-duration: 0.4s;
 }
 
@@ -57,7 +59,7 @@ $brownColor: #7a6563;
     background-color: #745c97;
   }
 
-.createH1 {
+.createH1, .myCart {
     color: $mainColor;
     font-family: 'Rochester', cursive;
     font-size: 70px;
@@ -123,3 +125,77 @@ $brownColor: #7a6563;
     background-color: white;
     border: solid 1px $mainColor;
   }
+
+.showH2 {
+    background-color: $mainColor;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.aboutDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        text-align: center;
+        width: 70%;
+        color: $mainColor;
+        font-weight: bold;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    img {
+        border: dotted white;
+    }
+}
+
+.aboutH1 {
+    font-family: 'Codystar', cursive;
+    font-size: 90px;
+    color: white;
+}
+
+.items {
+    a {
+        font-family: 'Josefin Sans', sans-serif; 
+        color: $brownColor;
+    }
+}
+
+.firstShowSection {
+    margin-bottom: 50px;
+    h2 {
+        color: #745c97;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    h4 {
+        color: #7a6563;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-left: 20px;
+    }
+}
+
+.updateLabel {
+    color: #7a6563;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 20px;
+}
+
+.showBool {
+    display: flex;
+}
+
+.ugly {
+    margin-left: 20px;
+    label {
+        margin-left: 0px;
+    }
+}

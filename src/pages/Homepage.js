@@ -1,10 +1,7 @@
-import Post from "../components/Post";
-import { Link, useLoaderData } from "react-router-dom";
-import { Form } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles.scss"
 
 const Homepage = (props) => {
-    const treat = useLoaderData()
     return <>
     <div style={{textAlign: "center"}}>
     <h3 className="homeH3" style={{margin: 15}}>welcome to...</h3>

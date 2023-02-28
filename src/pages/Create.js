@@ -34,7 +34,7 @@ const Create = (props) => {
             <label>Email:</label>
             <input type="text" name="Email" placeholder="Email"/>
             </div>
-            <button className="submitButton">SUBMIT</button>
+            <button className="submitButton">ADD TO CART</button>
         </Form>
         </>
 
